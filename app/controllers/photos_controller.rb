@@ -1,4 +1,8 @@
 class PhotosController < ApplicationController
+  def index
+        @all_photos=Photo.all
+        render("photos/index.html.erb")
+  end
   def show
     # the params hash looks like this: {"the_id_number" => "1"}
 
